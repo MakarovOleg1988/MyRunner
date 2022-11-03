@@ -17,7 +17,7 @@ namespace MyRunner
         void Awake()
         {
             NewController = new MyRunnerController();
-            NewController.Actionmap.Jump.performed += _ => Jump(); //Активация триггера прыжка
+            NewController.Actionmap.Jump.performed += _ => Jump();
         }
 
         void OnEnable()
@@ -31,7 +31,7 @@ namespace MyRunner
 
             var direction = NewController.Actionmap.Movement.ReadValue<float>();
             if (direction == 0) return;
-            transform.position += direction * speedSideways * Time.deltaTime * transform.right; //Перемещение влево и вправо
+            transform.position += direction * speedSideways * Time.deltaTime * transform.right;
         }
     }
 }

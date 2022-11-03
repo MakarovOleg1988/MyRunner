@@ -861,7 +861,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 47.364, y: 11.843, z: 30.493}
 --- !u!1001 &13855991
 PrefabInstance:
@@ -9405,7 +9405,7 @@ Transform:
   - {fileID: 419211326}
   - {fileID: 1813147206}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &253673795
 Rigidbody:
@@ -19605,7 +19605,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &573943860
 PrefabInstance:
@@ -65788,7 +65788,7 @@ Transform:
   - {fileID: 1791999483}
   - {fileID: 1377933573}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2111121555
 AudioSource:
