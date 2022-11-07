@@ -1,14 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 namespace MyRunner
 {
     public class Gamemanager : MonoBehaviour
     {
-
         public static Gamemanager _Manager;
         public GameObject _loseMenu;
         public GameObject _StartMenu;

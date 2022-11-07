@@ -17,12 +17,8 @@ namespace MyRunner
         void Awake()
         {
             NewController = new MyRunnerController();
-            NewController.Actionmap.Jump.performed += _ => Jump();
-        }
-
-        void OnEnable()
-        {
             NewController.Actionmap.Movement.Enable();
+            NewController.Actionmap.Jump.performed += _ => Jump();
         }
 
         protected void Update()

@@ -1,59 +1,55 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEditor;
 
 namespace MyRunner
 {
     public class ButtonManager : MonoBehaviour
     {
-        public GameObject _pausePanel;
-
-        [SerializeField] public bool _pauseButton;
-        [SerializeField] private bool _startButton;
-        [SerializeField] private bool _nextLevelButton;
-        [SerializeField] private bool _restartButton;
+        [SerializeField] public GameObject _pausePanel;
         [SerializeField] private AudioSource _clickButton;
 
-        public void OnMouseEnter()
+        public void StartNewGame()
         {
-            if (_startButton) StartCoroutine(StartNewGameCoroutine());
-            if (_restartButton) StartCoroutine(RestartCoroutine());
-            if (_nextLevelButton) StartCoroutine(NextLevelCoroutine());
-        }
-
-        public void PauseGame()
-        {
-            if (_pauseButton)
-            {
-                StartCoroutine(ResumeCoroutine());
-            }
-            else
-            {
-                StartCoroutine(PauseCoroutine());
-            }
+            StartCoroutine(StartNewGameCoroutine());
         }
 
         IEnumerator StartNewGameCoroutine()
         {
             _clickButton.Play();
             yield return new WaitForSeconds(0.2f);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        public void Restart()
+        {
+            StartCoroutine(RestartCoroutine());
         }
 
         IEnumerator RestartCoroutine()
         {
             _clickButton.Play();
-            SceneManager.LoadScene(1);
-            Time.timeScale = 1f;
             yield return new WaitForSeconds(0.2f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Time.timeScale = 1f;
         }
+
+        public void SetNextLevel()
+        {
+            StartCoroutine(NextLevelCoroutine());
+        }
+
         IEnumerator NextLevelCoroutine()
         {
             _clickButton.Play();
             yield return new WaitForSeconds(0.2f);
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        public void SetPause()
+        {
+            StartCoroutine(PauseCoroutine());
         }
 
         IEnumerator PauseCoroutine()
@@ -61,16 +57,32 @@ namespace MyRunner
             _clickButton.Play();
             yield return new WaitForSeconds(0.2f);
             _pausePanel.SetActive(true);
-            _pauseButton = true;
             Time.timeScale = 0f;
         }
+
+        public void SetResumeGame()
+        {
+            StartCoroutine(ResumeCoroutine());
+        }
+
         IEnumerator ResumeCoroutine()
         {
             _clickButton.Play();
             Time.timeScale = 1f;
             _pausePanel.SetActive(false);
-            _pauseButton = false;
             yield return new WaitForSeconds(0.2f);
+        }
+
+        public void ExitGame()
+        {
+            StartCoroutine(ExitCoroutine());
+        }
+
+        IEnumerator ExitCoroutine()
+        {
+            _clickButton.Play();
+            yield return new WaitForSeconds(0.2f);
+            EditorApplication.isPlaying = false;
         }
     }
 }

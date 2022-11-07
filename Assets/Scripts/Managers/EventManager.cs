@@ -5,23 +5,23 @@ namespace MyRunner
 {
     public class EventManager : MonoBehaviour
     {
-        public static Action _onSetCoin;
-        public static Action<int> _onSetAidKit;
-        public static Action<int> _onSetDamageCoin;
+        public static event Action _onSetCoin;
+        public static event Action _onSetAidKit;
+        public static event Action _onSetDamageCoin;
 
         public static void SendSetCoin()
         {
             _onSetCoin?.Invoke();
         }
 
-        public static void SendSetAidKit(int health)
+        public static void SendSetAidKit()
         {
-            _onSetAidKit?.Invoke(health);
+            _onSetAidKit?.Invoke();
         }
 
-        public static void SendSetDamage(int damage)
+        public static void SendSetDamage()
         {
-            _onSetDamageCoin?.Invoke(damage);
+            _onSetDamageCoin?.Invoke();
         }
     }
 }

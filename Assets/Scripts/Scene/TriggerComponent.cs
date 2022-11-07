@@ -16,14 +16,10 @@ namespace MyRunner
         {
             if (other.GetComponent<OldInputSystem>() == null) return;
 
-            if (_isDamage == true)
-            {
-                EventManager.SendSetDamage(1);
-                _crashSound1.Play();
-            }
-                else if(_isCoin == true) EventManager.SendSetCoin();
-                else if (_isAirKit == true) EventManager.SendSetAidKit(1);
-                else Gamemanager._Manager.UpdateLevel();
+            if (_isDamage == true) EventManager.SendSetDamage();
+            else if(_isCoin == true) EventManager.SendSetCoin();
+            else if (_isAirKit == true) EventManager.SendSetAidKit();
+            else Gamemanager._Manager.UpdateLevel();
         }
     }
 }
