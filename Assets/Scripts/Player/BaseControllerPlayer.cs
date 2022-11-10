@@ -31,8 +31,7 @@ namespace MyRunner
             }
         }
 
-        //Прыжок
-        protected virtual void Jump() //Прыжок
+        protected virtual void Jump()
         {
             if (Input.GetKeyDown(KeyCode.Space) && CooldownJump <= 0)
             {

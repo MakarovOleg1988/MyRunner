@@ -5582,7 +5582,7 @@ PrefabInstance:
     - target: {fileID: 3646856969870682223, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: _CoinScore
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2118600983}
     - target: {fileID: 3646856969870682226, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.16
@@ -12858,6 +12858,7 @@ MonoBehaviour:
   JumpForce: 5
   speedSideways: 5
   CooldownJump: 1
+  _livesPlayer: 4
   rbPlayer: {fileID: 253673801}
 --- !u!114 &253673800
 MonoBehaviour:
@@ -12875,6 +12876,7 @@ MonoBehaviour:
   JumpForce: 5
   speedSideways: 5
   CooldownJump: 3
+  _livesPlayer: 0
   rbPlayer: {fileID: 0}
 --- !u!54 &253673801
 Rigidbody:
@@ -13516,7 +13518,7 @@ PrefabInstance:
     - target: {fileID: 3646856969870682223, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: _CoinScore
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2118600983}
     - target: {fileID: 3646856969870682226, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.098
@@ -37941,7 +37943,7 @@ PrefabInstance:
     - target: {fileID: 3646856969870682223, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: _CoinScore
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2118600983}
     - target: {fileID: 3646856969870682226, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -44867,7 +44869,7 @@ PrefabInstance:
     - target: {fileID: 3646856969870682223, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: _CoinScore
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2118600983}
     - target: {fileID: 3646856969870682226, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.12
@@ -90106,7 +90108,7 @@ PrefabInstance:
     - target: {fileID: 3646856969870682223, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: _CoinScore
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2118600983}
     - target: {fileID: 3646856969870682226, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -90844,7 +90846,7 @@ PrefabInstance:
     - target: {fileID: 3646856969870682223, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: _CoinScore
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2118600983}
     - target: {fileID: 3646856969870682226, guid: bc8de70d0aab3514985f83e515cd41da, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -95204,11 +95206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8e5528be6aa2e4a8138ed18e270cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loseMenu: {fileID: 0}
-  _StartMenu: {fileID: 0}
-  _winMenu: {fileID: 0}
+  _loseMenu: {fileID: 1072562058}
+  _StartMenu: {fileID: 2075252290}
+  _winMenu: {fileID: 2056545807}
   _mainmusic: {fileID: 2111121555}
-  _livesPlayer: 4
   finalProgress: 30
   blocks:
   - {fileID: 1410833382}
@@ -95219,10 +95220,10 @@ MonoBehaviour:
   - {fileID: 1927820759}
   - {fileID: 1101818099}
   - {fileID: 1088225033}
-  _textOfProgress: {fileID: 0}
-  _LivesScore: {fileID: 0}
-  _scoreOfWin: {fileID: 0}
-  _timerforStart: {fileID: 0}
+  _textOfProgress: {fileID: 884288042}
+  _LivesScore: {fileID: 1864173703}
+  _scoreOfWin: {fileID: 1166671843}
+  _timerforStart: {fileID: 2090759188}
   _player: {fileID: 253673793}
 --- !u!4 &2111121554
 Transform:

@@ -2,12 +2,11 @@ using UnityEngine;
 
 namespace MyRunner
 {
-	public class AidKitComponent : MonoBehaviour
+	public abstract class AidKitComponent : MonoBehaviour
 	{
 		public static AidKitComponent instance;
-		public static HealthManager _HealthManager;
-		[SerializeField] public AudioSource _aidKitSound;
-		[SerializeField] protected float _speedRotate;
+		[SerializeField] public AudioSource _aidKitSound ;
+		[SerializeField] public float _speedRotate = 40f;
 
 		private void Start()
 		{

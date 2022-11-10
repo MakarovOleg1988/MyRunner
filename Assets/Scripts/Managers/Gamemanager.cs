@@ -13,7 +13,6 @@ namespace MyRunner
 
         [SerializeField] private AudioSource _mainmusic;
 
-        [SerializeField, Range(1, 10)] public float _livesPlayer; //Жизни героя
         [SerializeField] private int finalProgress; //счет для победы
         private int progress = 0; //счет прогресса
         private float _secBeforeStart = 5; //таймер запуска уровня
@@ -23,7 +22,7 @@ namespace MyRunner
 
         [SerializeField] public Transform[] blocks; //Массив блоков
         [SerializeField] public Text _textOfProgress; // Прогресс
-        [SerializeField] public Text _LivesScore; //Жизни
+        [SerializeField] public Text _LivesScore;
         [SerializeField] public Text _scoreOfWin; //Поле для вывода победного счета
         [SerializeField] public Text _timerforStart;
         [SerializeField] private Transform _player;

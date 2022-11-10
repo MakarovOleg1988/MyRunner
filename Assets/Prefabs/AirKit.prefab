@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5395927047755449748}
   - component: {fileID: 479209657223444692}
   - component: {fileID: 7077576782215963252}
-  - component: {fileID: 247409216087743038}
   - component: {fileID: 2439689290468383094}
+  - component: {fileID: -7579285010964280008}
   m_Layer: 0
   m_Name: AirKit
   m_TagString: Untagged
@@ -65,20 +65,6 @@ MonoBehaviour:
   _isCoin: 0
   _isAirKit: 1
   _crashSound1: {fileID: 0}
---- !u!114 &247409216087743038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5397711286048188638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d05ff161e6b52ed43af4096a9f07b29c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _aidKitSound: {fileID: 2439689290468383094}
-  _speedRotate: 40
 --- !u!82 &2439689290468383094
 AudioSource:
   m_ObjectHideFlags: 0
@@ -175,6 +161,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7579285010964280008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5397711286048188638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5298aea5b691e74eafe82646bd23d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aidKitSound: {fileID: 2439689290468383094}
+  _speedRotate: 40
 --- !u!1 &5397747152814958022
 GameObject:
   m_ObjectHideFlags: 0
