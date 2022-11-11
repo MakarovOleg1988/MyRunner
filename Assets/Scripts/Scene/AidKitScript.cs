@@ -2,9 +2,8 @@ using UnityEngine;
 
 namespace MyRunner
 {
-    public class AidKitScript : PlayerComponents
+    public class AidKitScript : AidKitComponent
     {
-        public static AidKitComponent instance;
 
         private void Start()
         {
@@ -18,16 +17,16 @@ namespace MyRunner
 
         void RotateAidKit()
         {
-            transform.Rotate(Vector3.up, AidKitComponent.instance._speedRotate * Time.deltaTime);
+            transform.Rotate(Vector3.up, _speedRotate * Time.deltaTime);
         }
 
         public void SetLives()
         {
-            if (_livesPlayer < 4)
+            if (HealthManager._healthManager._livesPlayer < 4)
             {
-                AidKitComponent.instance._aidKitSound.Play();
-                _livesPlayer++;
-                Gamemanager._Manager._LivesScore.text = _livesPlayer.ToString();
+                _aidKitSound.Play();
+                HealthManager._healthManager._livesPlayer++;
+                Gamemanager._Manager._LivesScore.text = HealthManager._healthManager._livesPlayer.ToString();
             }
         }
     }

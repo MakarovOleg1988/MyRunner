@@ -33,7 +33,6 @@ namespace MyRunner
             yield return new WaitForSeconds(0.2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             BaseControllerPlayer._speedMove = 0f;
-            CoinsComponents.instance._coin = 0;
             Time.timeScale = 1f;
         }
 

@@ -5,8 +5,8 @@ namespace MyRunner
 	public abstract class AidKitComponent : MonoBehaviour
 	{
 		public static AidKitComponent instance;
-		[SerializeField] public AudioSource _aidKitSound ;
-		[SerializeField] public float _speedRotate = 40f;
+		[SerializeField] public float _speedRotate;
+		[SerializeField] public AudioSource _aidKitSound;
 
 		private void Start()
 		{

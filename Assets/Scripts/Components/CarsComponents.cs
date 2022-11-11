@@ -10,6 +10,7 @@ namespace MyRunner
 		[SerializeField] protected float TimeBwtMove;
 		[SerializeField] protected float timeToWaiting;
 		protected bool _carNotDestroy = true;
+		[SerializeField] protected bool _carMoveRight = true;
 	}
 }
  

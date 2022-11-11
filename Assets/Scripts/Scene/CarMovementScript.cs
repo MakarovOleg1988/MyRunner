@@ -8,7 +8,8 @@ namespace MyRunner
 		private void Start()
 		{
 			_moveVectorCar = GetComponent<Transform>();
-			StartCoroutine(CarMovementRight());
+			if(_carMoveRight == true) StartCoroutine(CarMovementRight());
+			if (_carMoveRight == false) StartCoroutine(CarMovementLeft());
 		}
 
 		private IEnumerator MoveFromTo(Vector3 startPosition, Vector3 endPosition, float time)
@@ -40,7 +41,8 @@ namespace MyRunner
 		{
 			while (_carNotDestroy == true)
 			{
-				yield return MoveFromTo(transform.position, transform.position + new Vector3(50f, 0f, 0f), TimeBwtMove);
+				transform.Rotate(0, -180, 0);
+				yield return MoveFromTo(transform.position, transform.position + new Vector3(-50f, 0f, 0f), TimeBwtMove);
 				yield return new WaitForSeconds(timeToWaiting);
 
 				Destroy(this.gameObject);

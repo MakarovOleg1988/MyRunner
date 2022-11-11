@@ -56,10 +56,7 @@ namespace MyRunner
             _textOfProgress.text = progress.ToString();
             _scoreOfWin.text = finalProgress.ToString();
 
-            if (progress >= finalProgress)
-            {
-                _winMenu.SetActive(true);
-            }
+            if (progress >= finalProgress) _winMenu.SetActive(true);
 
             lastZ += step;
             var position = blocks[currentBlock].position;
