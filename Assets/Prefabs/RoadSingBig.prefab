@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 3761239994961363245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5964633, y: -0.00000011920929, z: -15.572048}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.3837, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3763806686979119153}
@@ -129,8 +129,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1288207, z: 1}
-  m_Center: {x: 0, y: 0.50219774, z: 0}
+  m_Size: {x: 1, y: 1.2403902, z: 1}
+  m_Center: {x: 0, y: 0.5579825, z: 0}
 --- !u!114 &17495335337966130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isDamage: 1
+  _isCoin: 0
+  _isAirKit: 0
   _crashSound1: {fileID: 303082811270940493}
 --- !u!82 &303082811270940493
 AudioSource:

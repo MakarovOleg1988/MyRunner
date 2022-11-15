@@ -13,7 +13,8 @@ namespace MyRunner
         {
             _healthManager = this;
         }
-        public void Start()
+
+        private void Start()
         {
             _livesPlayer = 4;
             EventManager._onSetDamage += SetDamage;
