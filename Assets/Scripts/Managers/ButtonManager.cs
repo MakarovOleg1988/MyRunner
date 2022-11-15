@@ -46,6 +46,7 @@ namespace MyRunner
             _clickButton.Play();
             yield return new WaitForSeconds(0.2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            BaseControllerPlayer._speedMove = 0f;
         }
 
         public void SetPause()

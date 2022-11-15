@@ -14,8 +14,6 @@ namespace MyRunner
 
         protected void Update()
         {
-            base.Rage();
-
             if (Input.GetKey(KeyCode.A)) transform.position -= new Vector3(speedSideways * Time.deltaTime, 0, 0); //Перемещение влево
             if (Input.GetKey(KeyCode.D)) transform.position += new Vector3(speedSideways * Time.deltaTime, 0, 0); //Перемещение вправо
 

@@ -4,23 +4,40 @@ namespace MyRunner
 {
     public class SpawnCarScript : MonoBehaviour
     {
-        public GameObject _car;
+        [SerializeField] public GameObject _car;
+        [SerializeField] public GameObject _carLeft;
+        [SerializeField] private carChoose _carChoose;
         public Transform _spawnpoint;
         public float _timebetweenspawn;
 
         private void Update()
         {
-            SpawnCar();
+            SpawnCar(_car, _carLeft);
         }
 
-        void SpawnCar()
+        public void SpawnCar(GameObject _car, GameObject _carLeft)
         {
-            if (_timebetweenspawn <= 0)
+            switch (_carChoose)
             {
-                    Instantiate(_car, _spawnpoint.position, Quaternion.identity);
-                _timebetweenspawn = 3f;
-                }
-            else _timebetweenspawn -= Time.deltaTime;
+                case carChoose.Car:
+                    {
+                        if (_timebetweenspawn <= 0)
+                        {
+                            Instantiate(_car, _spawnpoint.position, Quaternion.identity);
+                            _timebetweenspawn = 3f;
+                        }
+                        else _timebetweenspawn -= Time.deltaTime;
+                    }; break;
+                case carChoose.LeftCar:
+                    {
+                        if (_timebetweenspawn <= 0)
+                        {
+                            Instantiate(_carLeft, _spawnpoint.position, Quaternion.identity);
+                            _timebetweenspawn = 3f;
+                        }
+                        else _timebetweenspawn -= Time.deltaTime;
+                    }; break;
+            }
         }
     }
 }

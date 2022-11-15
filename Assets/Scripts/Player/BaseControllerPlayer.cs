@@ -40,28 +40,5 @@ namespace MyRunner
             }
             else CooldownJump -= Time.deltaTime;
         }
-
-        protected void Rage()
-        {
-            switch (CoinsComponents.instance._coin)
-            {
-                case 1:
-                    if (Input.GetKeyDown(KeyCode.Q))
-                    {
-                       _speedMove += 2;
-                        CoinsComponents.instance._coin -= 1;
-                        CoinsComponents.instance._CoinScore.text = CoinsComponents.instance._coin.ToString();
-                    }; break;
-                
-                case 2:
-                    if (Input.GetKeyDown(KeyCode.E))
-                    {
-                        JumpForce += 3;
-                        CoinsComponents.instance._coin -= 2;
-                        CoinsComponents.instance._CoinScore.text = CoinsComponents.instance._coin.ToString();
-                    }; break;
-                default: break;
-            }
-        }
     }
 }

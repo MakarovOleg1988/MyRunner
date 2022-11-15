@@ -111,5 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _car: {fileID: 1885862921828382082, guid: 59a8c01bfa7fd904d91c75687cde9fef, type: 3}
+  _carLeft: {fileID: 4714918986472258121, guid: 95b5ab6e81fde9b4e8a0a9683299a729, type: 3}
   _spawnpoint: {fileID: 3080978862316877964}
   _timebetweenspawn: 3

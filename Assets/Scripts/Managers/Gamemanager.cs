@@ -47,7 +47,7 @@ namespace MyRunner
             }
 
             _StartMenu.SetActive(false);
-            BaseControllerPlayer._speedMove += 7;
+            BaseControllerPlayer._speedMove += 0;
         }
 
         public void UpdateLevel()
