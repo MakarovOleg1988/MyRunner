@@ -33,6 +33,7 @@ namespace MyRunner
             yield return new WaitForSeconds(0.2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             BaseControllerPlayer._speedMove = 0f;
+            Gamemanager._Manager._loseMenu.SetActive(false);
             Time.timeScale = 1f;
         }
 

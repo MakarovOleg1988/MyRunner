@@ -1,26 +1,25 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MyRunner
 {
-    public class CoinScript : CoinsComponents
-    {
+        public class CoinScript : CoinsComponents
+        {
+        [SerializeField] public Text _CoinScore;
+
         private void Start() => EventManager._onSetCoin += SetCoin;
 
-        void Update()
-        {
-            transform.Rotate(Vector3.up, GetRotate * Time.deltaTime);
-        }
-
-        public void SetCoin()
-        {
-            if (_coin <= 100)
+            void Update()
             {
-                _coin++;
-                _coinSound.Play();
-                _CoinScore.text = _coin.ToString();
+                transform.Rotate(Vector3.up, GetRotate * Time.deltaTime);
+            }
+
+            public void SetCoin()
+            {
+                 _coin++;
+                 _coinSound.Play();
+                 Debug.Log(_coin);
             }
         }
     }
-}
-
 

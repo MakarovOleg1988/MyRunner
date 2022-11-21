@@ -543,7 +543,6 @@ GameObject:
   - component: {fileID: 5890443934666429992}
   - component: {fileID: 5890443934666429994}
   - component: {fileID: 5890443934666429997}
-  - component: {fileID: 6186554821602016428}
   m_Layer: 0
   m_Name: Garbage
   m_TagString: Untagged
@@ -700,18 +699,6 @@ MonoBehaviour:
   _isCoin: 0
   _isAirKit: 0
   _crashSound1: {fileID: 5890443934666429994}
---- !u!114 &6186554821602016428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5890443934666429993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d05ff161e6b52ed43af4096a9f07b29c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5890443934798703015
 GameObject:
   m_ObjectHideFlags: 0

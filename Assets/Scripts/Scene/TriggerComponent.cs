@@ -10,8 +10,6 @@ namespace MyRunner
         [SerializeField] private bool _isAirKit;
         [SerializeField] public AudioSource _crashSound1;
 
-        public static Action _setCoin;
-
         void OnTriggerEnter(Collider other)
         {
             if (other.GetComponent<OldInputSystem>() == null) return;

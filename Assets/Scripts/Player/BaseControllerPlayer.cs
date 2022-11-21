@@ -8,6 +8,7 @@ namespace MyRunner
         protected virtual void Start()
         {
             rbPlayer = GetComponent<Rigidbody>();
+            
             StartCoroutine(CorotiuneMovement());
             StartCoroutine(CorotiunespeedBust());
         }
