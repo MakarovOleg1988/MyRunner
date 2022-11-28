@@ -23,7 +23,8 @@ namespace MyRunner
         [SerializeField] public Transform[] blocks; //Массив блоков
         [SerializeField] public Text _textOfProgress; // Прогресс
         [SerializeField] public Text _LivesScore;
-        [SerializeField] public Text _scoreOfWin; //Поле для вывода победного счета
+        [SerializeField] public Text _CoinScore;
+        [SerializeField] public Text _scoreOfWin;
         [SerializeField] public Text _timerforStart;
         [SerializeField] private Transform _player;
         

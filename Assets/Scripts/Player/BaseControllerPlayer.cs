@@ -7,7 +7,7 @@ namespace MyRunner
     {
         protected virtual void Start()
         {
-            rbPlayer = GetComponent<Rigidbody>();
+            _rbPlayer = GetComponent<Rigidbody>();
             
             StartCoroutine(CorotiuneMovement());
             StartCoroutine(CorotiunespeedBust());
@@ -17,7 +17,7 @@ namespace MyRunner
         {
             while (true)
             {
-                transform.position += new Vector3(0, 0, (_speedMove + speedBust) * Time.deltaTime);
+                transform.position += new Vector3(0, 0, (_speedMove + _speedBust) * Time.deltaTime);
                 yield return null;
             }
         }
@@ -27,7 +27,7 @@ namespace MyRunner
             while (true)
             {
                 yield return new WaitForSeconds(20);
-                speedBust = speedBust + 1f;
+                _speedBust = _speedBust + 1f;
                 yield return new WaitForSeconds(20);
             }
         }
@@ -36,7 +36,7 @@ namespace MyRunner
         {
             if (Input.GetKeyDown(KeyCode.Space) && CooldownJump <= 0)
             {
-                rbPlayer.AddForce(transform.up * JumpForce, ForceMode.Impulse);
+                _rbPlayer.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
                 CooldownJump = 1f;
             }
             else CooldownJump -= Time.deltaTime;

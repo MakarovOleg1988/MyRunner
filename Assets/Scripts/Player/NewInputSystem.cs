@@ -25,7 +25,7 @@ namespace MyRunner
 
             var direction = NewController.Actionmap.Movement.ReadValue<float>();
             if (direction == 0) return;
-            transform.position += direction * speedSideways * Time.deltaTime * transform.right;
+            transform.position += direction * _speedSideways * Time.deltaTime * transform.right;
         }
     }
 }

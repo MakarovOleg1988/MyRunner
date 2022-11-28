@@ -14,8 +14,8 @@ namespace MyRunner
 
         protected void Update()
         {
-            if (Input.GetKey(KeyCode.A)) transform.position -= new Vector3(speedSideways * Time.deltaTime, 0, 0); //Перемещение влево
-            if (Input.GetKey(KeyCode.D)) transform.position += new Vector3(speedSideways * Time.deltaTime, 0, 0); //Перемещение вправо
+            if (Input.GetKey(KeyCode.A)) transform.position -= new Vector3(_speedSideways * Time.deltaTime, 0, 0); //Перемещение влево
+            if (Input.GetKey(KeyCode.D)) transform.position += new Vector3(_speedSideways * Time.deltaTime, 0, 0); //Перемещение вправо
 
             if (Input.GetKeyDown(KeyCode.Space)) Jump(); //Прыжок "старый"
         }

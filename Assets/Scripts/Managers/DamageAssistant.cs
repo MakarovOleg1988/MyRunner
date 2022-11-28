@@ -19,7 +19,8 @@ namespace MyRunner
             if (PlayerComponents._livesPlayer <= 0)
             {
                 PlayerComponents._speedMove = 0f;
-                PlayerComponents.speedBust = 0f;
+                PlayerComponents._speedBust = 0f;
+                PlayerComponents._livesPlayer = 4;
                 Gamemanager._Manager._loseMenu.SetActive(true);
             }
         }

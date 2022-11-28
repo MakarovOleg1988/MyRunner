@@ -5,8 +5,6 @@ namespace MyRunner
 {
         public class CoinScript : CoinsComponents
         {
-        [SerializeField] public Text _CoinScore;
-
         private void Start() => EventManager._onSetCoin += SetCoin;
 
             void Update()
@@ -18,7 +16,7 @@ namespace MyRunner
             {
                  _coin++;
                  _coinSound.Play();
-                 Debug.Log(_coin);
+            Gamemanager._Manager._CoinScore.text = _coin.ToString();
             }
         }
     }
