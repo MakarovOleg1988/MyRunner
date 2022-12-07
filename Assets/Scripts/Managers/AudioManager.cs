@@ -1,16 +1,33 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+namespace MyRunner
 {
-    // Start is called before the first frame update
-    void Start()
+    public class AudioManager : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private AudioSource[] _audioSourceCrash;
+        [SerializeField] private AudioSource _audioSourceAirKit;
+        [SerializeField] private AudioSource _audioSourceCoin;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            EventManager._onSetDamage += SetSoundCrach;
+            EventManager._onSetAidKit += SetSoundLives;
+            EventManager._onSetCoin += SetSoundCoin;
+        }
+
+        void SetSoundCrach()
+        {
+            _audioSourceCrash[Random.Range(0, 2)].Play();
+        }
+
+        void SetSoundLives()
+        {
+            _audioSourceAirKit.Play();
+        }
+
+        void SetSoundCoin()
+        {
+            _audioSourceCoin.Play();
+        }
     }
 }

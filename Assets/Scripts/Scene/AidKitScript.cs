@@ -23,7 +23,6 @@ namespace MyRunner
         {
             if (PlayerComponents._livesPlayer < 4)
             {
-                _aidKitSound.Play();
                 PlayerComponents._livesPlayer++;
                 Gamemanager._Manager._LivesScore.text = PlayerComponents._livesPlayer.ToString();
                 Debug.Log(PlayerComponents._livesPlayer);

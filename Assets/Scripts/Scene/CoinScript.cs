@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace MyRunner
 {
         public class CoinScript : CoinsComponents
         {
-        private void Start() => EventManager._onSetCoin += SetCoin;
+            private void Start() => EventManager._onSetCoin += SetCoin;
 
             void Update()
             {
@@ -14,9 +13,8 @@ namespace MyRunner
 
             public void SetCoin()
             {
-                 _coin++;
-                 _coinSound.Play();
-            Gamemanager._Manager._CoinScore.text = _coin.ToString();
+                _coin++;
+                Gamemanager._Manager._CoinScore.text = _coin.ToString();
             }
         }
     }
