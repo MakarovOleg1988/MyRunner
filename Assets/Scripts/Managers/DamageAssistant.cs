@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace MyRunner
 {
-    public class DamageAssistant : MonoBehaviour
+    public class DamageAssistant : MonoBehaviour, IEventManager
     {
         private void Start()
         {
-            EventManager._onSetDamage += SetDamage;
+            IEventManager._onSetDamage += SetDamage;
         }
 
         public void FixedUpdate()

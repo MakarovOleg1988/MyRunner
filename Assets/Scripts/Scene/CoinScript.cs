@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace MyRunner
 {
-        public class CoinScript : CoinsComponents
-        {
-            private void Start() => EventManager._onSetCoin += SetCoin;
+        public class CoinScript : CoinsComponents, IEventManager
+    {
+            private void Start() => IEventManager._onSetCoin += SetCoin;
 
             void Update()
             {

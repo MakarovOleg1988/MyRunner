@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace MyRunner
 {
-    public class AidKitScript : AidKitComponent
+    public class AidKitScript : AidKitComponent, IEventManager
     {
         private void Start()
         {
-            EventManager._onSetAidKit += SetLives;
+            IEventManager._onSetAidKit += SetLives;
         }
 
         void Update()

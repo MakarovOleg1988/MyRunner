@@ -1,9 +1,8 @@
 using System;
-using UnityEngine;
 
 namespace MyRunner
 {
-    public class EventManager : MonoBehaviour
+    public interface IEventManager
     {
         public static event Action _onSetCoin;
         public static event Action _onSetAidKit;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MyRunner
 {
-    public class AudioManager : MonoBehaviour
+    public class AudioManager : MonoBehaviour, IEventManager
     {
         [SerializeField] private AudioSource[] _audioSourceCrash;
         [SerializeField] private AudioSource _audioSourceAirKit;
@@ -10,9 +10,9 @@ namespace MyRunner
 
         private void Start()
         {
-            EventManager._onSetDamage += SetSoundCrach;
-            EventManager._onSetAidKit += SetSoundLives;
-            EventManager._onSetCoin += SetSoundCoin;
+            IEventManager._onSetDamage += SetSoundCrach;
+            IEventManager._onSetAidKit += SetSoundLives;
+            IEventManager._onSetCoin += SetSoundCoin;
         }
 
         void SetSoundCrach()
