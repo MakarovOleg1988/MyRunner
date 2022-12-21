@@ -4305,7 +4305,6 @@ MonoBehaviour:
   _isDamage: 0
   _isCoin: 0
   _isAirKit: 0
-  _crashSound1: {fileID: 0}
 --- !u!65 &112519772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16516,7 +16515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pausePanel: {fileID: 426769237}
-  _clickButton: {fileID: 469825296}
+  _ChangeLevelPanel: {fileID: 0}
+  _MainMenuPanel: {fileID: 0}
+  _level: []
 --- !u!82 &469825296
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18487,7 +18488,6 @@ MonoBehaviour:
   _isDamage: 0
   _isCoin: 0
   _isAirKit: 0
-  _crashSound1: {fileID: 0}
 --- !u!65 &515704980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24779,7 +24779,6 @@ MonoBehaviour:
   _isDamage: 0
   _isCoin: 0
   _isAirKit: 0
-  _crashSound1: {fileID: 0}
 --- !u!65 &722006626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29549,7 +29548,6 @@ MonoBehaviour:
   _isDamage: 0
   _isCoin: 0
   _isAirKit: 0
-  _crashSound1: {fileID: 0}
 --- !u!65 &879364775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31106,7 +31104,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pausePanel: {fileID: 0}
-  _clickButton: {fileID: 906376648}
+  _ChangeLevelPanel: {fileID: 0}
+  _MainMenuPanel: {fileID: 0}
+  _level: []
 --- !u!114 &906376650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38810,6 +38810,7 @@ MonoBehaviour:
   - {fileID: 1139459866}
   _audioSourceAirKit: {fileID: 1139459865}
   _audioSourceCoin: {fileID: 1139459864}
+  _clickButton: {fileID: 0}
 --- !u!4 &1141415606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4639998926729364, guid: 7c311e85b96e43d4aaaf68e86c127195, type: 3}
@@ -46745,7 +46746,6 @@ MonoBehaviour:
   _isDamage: 0
   _isCoin: 0
   _isAirKit: 0
-  _crashSound1: {fileID: 0}
 --- !u!65 &1382611595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46979,7 +46979,6 @@ MonoBehaviour:
   _isDamage: 0
   _isCoin: 0
   _isAirKit: 0
-  _crashSound1: {fileID: 0}
 --- !u!4 &1387752584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3757260175752647201, guid: bf61d4a0c544bd9459c77c8276d22a38, type: 3}
@@ -56575,7 +56574,6 @@ MonoBehaviour:
   _isDamage: 0
   _isCoin: 0
   _isAirKit: 0
-  _crashSound1: {fileID: 0}
 --- !u!65 &1760259554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65038,7 +65036,6 @@ MonoBehaviour:
   _isDamage: 0
   _isCoin: 0
   _isAirKit: 0
-  _crashSound1: {fileID: 0}
 --- !u!65 &2025241059
 BoxCollider:
   m_ObjectHideFlags: 0
