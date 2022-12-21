@@ -4,6 +4,6 @@ namespace MyRunner
 {
 	public abstract class AidKitComponent : MonoBehaviour
 	{
-		[SerializeField] public float _speedRotate;
+		[SerializeField] protected float _speedRotate;
 	}
 }

@@ -7,6 +7,7 @@ namespace MyRunner
         public static event Action _onSetCoin;
         public static event Action _onSetAidKit;
         public static event Action _onSetDamage;
+        public static event Action _onSetButton;
 
         public static void SendSetCoin()
         {
@@ -21,6 +22,11 @@ namespace MyRunner
         public static void SendSetDamage()
         {
             _onSetDamage?.Invoke();
+        }
+
+        public static void SendSetButton()
+        {
+            _onSetButton?.Invoke();
         }
     }
 }

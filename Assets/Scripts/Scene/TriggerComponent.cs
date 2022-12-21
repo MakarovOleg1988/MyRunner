@@ -8,7 +8,6 @@ namespace MyRunner
         [SerializeField] private bool _isDamage;
         [SerializeField] private bool _isCoin;
         [SerializeField] private bool _isAirKit;
-        [SerializeField] public AudioSource _crashSound1;
 
         void OnTriggerEnter(Collider other)
         {

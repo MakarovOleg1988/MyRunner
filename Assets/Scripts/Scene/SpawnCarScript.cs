@@ -8,7 +8,7 @@ namespace MyRunner
         [SerializeField] public GameObject _carLeft;
         [SerializeField] private carChoose _carChoose;
         public Transform _spawnpoint;
-        public float _timebetweenspawn;
+        private float _timebetweenspawn;
 
         private void Update()
         {

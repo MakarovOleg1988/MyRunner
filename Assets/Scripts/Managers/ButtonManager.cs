@@ -2,27 +2,62 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
+using System;
 
 namespace MyRunner
 {
-    public class ButtonManager : MonoBehaviour
+    public class ButtonManager : MonoBehaviour, IEventManager
     {
-        [SerializeField] public GameObject _pausePanel;
-        [SerializeField] private AudioSource _clickButton;
-
-        public void StartNewGame()
+        [SerializeField] private GameObject _pausePanel;
+        [SerializeField] private GameObject _ChangeLevelPanel;
+        [SerializeField] private GameObject _MainMenuPanel;
+        [SerializeField] private Text[] _level;
+       
+        private void Start()
         {
-            StartCoroutine(StartNewGameCoroutine());
+            IEventManager._onSetButton += ActionChangeLevelPanel;
+            IEventManager._onSetButton += BackMainMenuPanel;
+            IEventManager._onSetButton += Restart;
+            IEventManager._onSetButton += SetNextLevel;
+            IEventManager._onSetButton += SetPause;
+            IEventManager._onSetButton += SetResumeGame;
+            IEventManager._onSetButton += ExitGame;
         }
 
-        IEnumerator StartNewGameCoroutine()
+        public void ActionChangeLevelPanel()
         {
-            _clickButton.Play();
+            StartCoroutine(ActionChangeLevelPanelCoroutine());
+        }
+
+        IEnumerator ActionChangeLevelPanelCoroutine()
+        {
             yield return new WaitForSeconds(0.2f);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            BaseControllerPlayer._speedMove = 0f;
-            BaseControllerPlayer._speedBust = 0f;
-            PlayerComponents._livesPlayer = 4;
+            _ChangeLevelPanel.SetActive(true);
+            _MainMenuPanel.SetActive(false);
+        }
+
+        public void BackMainMenuPanel()
+        {
+            StartCoroutine(BackMainMenuCoroutine());
+        }
+
+        IEnumerator BackMainMenuCoroutine()
+        {
+            yield return new WaitForSeconds(0.2f);
+            _ChangeLevelPanel.SetActive(false);
+            _MainMenuPanel.SetActive(true);
+        }
+
+        public void ChangeLevel(string sceneName)
+        {
+            StartCoroutine(ChangeLevelCoroutine(sceneName));
+        }
+
+        IEnumerator ChangeLevelCoroutine(string sceneName)
+        {
+            yield return new WaitForSeconds(0.2f);
+            SceneManager.LoadScene(sceneName);
         }
 
         public void Restart()
@@ -32,7 +67,6 @@ namespace MyRunner
 
         IEnumerator RestartCoroutine()
         {
-            _clickButton.Play();
             yield return new WaitForSeconds(0.2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             BaseControllerPlayer._speedMove = 0f;
@@ -49,7 +83,6 @@ namespace MyRunner
 
         IEnumerator NextLevelCoroutine()
         {
-            _clickButton.Play();
             yield return new WaitForSeconds(0.2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             BaseControllerPlayer._speedMove = 0f;
@@ -64,7 +97,6 @@ namespace MyRunner
 
         IEnumerator PauseCoroutine()
         {
-            _clickButton.Play();
             yield return new WaitForSeconds(0.2f);
             _pausePanel.SetActive(true);
             Time.timeScale = 0f;
@@ -77,7 +109,6 @@ namespace MyRunner
 
         IEnumerator ResumeCoroutine()
         {
-            _clickButton.Play();
             Time.timeScale = 1f;
             _pausePanel.SetActive(false);
             yield return new WaitForSeconds(0.2f);
@@ -90,9 +121,8 @@ namespace MyRunner
 
         IEnumerator ExitCoroutine()
         {
-            _clickButton.Play();
             yield return new WaitForSeconds(0.2f);
-            EditorApplication.isPlaying = false;
+            Application.Quit();
         }
     }
 }
