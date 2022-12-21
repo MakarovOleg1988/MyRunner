@@ -9,6 +9,7 @@ This .gitignore file should be placed at the root of your Unity project director
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/[Mm]aterial/
 /[Mm]aterials/
 /[Pp]refabs/
 /[Ss]cenes/
