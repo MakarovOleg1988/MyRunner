@@ -5,6 +5,7 @@ namespace MyRunner
 {
     public class BaseControllerPlayer : PlayerComponents
     {
+
         protected virtual void Start()
         {
             _rbPlayer = GetComponent<Rigidbody>();
@@ -13,8 +14,17 @@ namespace MyRunner
             StartCoroutine(CorotiunespeedBust());
         }
 
-        protected IEnumerator CorotiuneMovement() //Курутина движения вперед
+        protected IEnumerator CorotiuneMovement()
         {
+            var Timer = 5;
+            while (Timer >= 0)
+            {
+                Timer--;
+                yield return new WaitForSeconds(1);
+            }
+
+            _speedMove += 7;
+
             while (true)
             {
                 transform.position += new Vector3(0, 0, (_speedMove + _speedBust) * Time.deltaTime);
@@ -22,7 +32,7 @@ namespace MyRunner
             }
         }
 
-        protected IEnumerator CorotiunespeedBust() //Курутина ускорения
+        protected IEnumerator CorotiunespeedBust()
         {
             while (true)
             {

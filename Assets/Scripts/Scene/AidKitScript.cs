@@ -4,6 +4,8 @@ namespace MyRunner
 {
     public class AidKitScript : AidKitComponent, IEventManager
     {
+        PlayerHealth player = new PlayerHealth();
+
         private void Start()
         {
             IEventManager._onSetAidKit += SetLives;
@@ -21,12 +23,9 @@ namespace MyRunner
 
         public void SetLives()
         {
-            if (PlayerComponents._livesPlayer < 4)
-            {
-                PlayerComponents._livesPlayer++;
-                Gamemanager._Manager._LivesScore.text = PlayerComponents._livesPlayer.ToString();
-                Debug.Log(PlayerComponents._livesPlayer);
-            }
+                player.LivesPlayer++;
+                Gamemanager._Manager._LivesScore.text = player.LivesPlayer.ToString();
+                Debug.Log(player.LivesPlayer);
         }
     }
 }

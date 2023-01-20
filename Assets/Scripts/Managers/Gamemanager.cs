@@ -13,20 +13,19 @@ namespace MyRunner
 
         [SerializeField] private AudioSource _mainmusic;
 
-        [SerializeField] private int finalProgress; //счет для победы
-        private int progress = 0; //счет прогресса
-        private float _secBeforeStart = 5; //таймер запуска уровня
-        private float step = 80f; //шаг переноса блока
+        [SerializeField] private int finalProgress;
+        private int progress = 0;
+        private float _secBeforeStart = 5;
+        private float step = 80f; 
         private int currentBlock = 4;
         private float lastZ = 160f;
 
-        [SerializeField] public Transform[] blocks; //Массив блоков
-        [SerializeField] public Text _textOfProgress; // Прогресс
+        [SerializeField] public Transform[] blocks;
+        [SerializeField] public Text _textOfProgress;
         [SerializeField] public Text _LivesScore;
         [SerializeField] public Text _CoinScore;
         [SerializeField] public Text _scoreOfWin;
         [SerializeField] public Text _timerforStart;
-        [SerializeField] private Transform _player;
         
         private void Awake()
         {
@@ -46,9 +45,7 @@ namespace MyRunner
                 _secBeforeStart--;
                 yield return new WaitForSeconds(1);
             }
-
             _StartMenu.SetActive(false);
-            BaseControllerPlayer._speedMove += 9;
         }
 
         public void UpdateLevel()

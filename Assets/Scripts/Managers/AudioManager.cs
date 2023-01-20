@@ -36,5 +36,13 @@ namespace MyRunner
         {
             _clickButton.Play();
         }
+
+        public void onDestroy()
+        {
+            IEventManager._onSetDamage -= SetSoundCrach;
+            IEventManager._onSetAidKit -= SetSoundLives;
+            IEventManager._onSetCoin -= SetSoundCoin;
+            IEventManager._onSetButton -= SetSoundButton;
+        }
     }
 }

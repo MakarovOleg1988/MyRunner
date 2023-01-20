@@ -4,6 +4,8 @@ namespace MyRunner
 {
     public class DamageAssistant : MonoBehaviour, IEventManager
     {
+        PlayerHealth player = new PlayerHealth();
+
         private void Start()
         {
             IEventManager._onSetDamage += SetDamage;
@@ -16,21 +18,18 @@ namespace MyRunner
         
         public void LoseGame()
         {
-            if (PlayerComponents._livesPlayer <= 0)
+            if (player.LivesPlayer <= 0)
             {
-                PlayerComponents._speedMove = 0f;
-                PlayerComponents._speedBust = 0f;
-                PlayerComponents._livesPlayer = 4;
                 Gamemanager._Manager._loseMenu.SetActive(true);
             }
         }
 
         private void SetDamage()
         {
-            PlayerComponents._livesPlayer--;
+            player.LivesPlayer--;
            
-            Gamemanager._Manager._LivesScore.text = PlayerComponents._livesPlayer.ToString();
-            Debug.Log(PlayerComponents._livesPlayer);
+            Gamemanager._Manager._LivesScore.text = player.LivesPlayer.ToString();
+            Debug.Log(player.LivesPlayer);
         }
     }
 }
