@@ -5,11 +5,12 @@ namespace MyRunner
 {
 	public class CarMovementScript : CarsComponents
 	{
+
 		private void Start()
 		{
 			_moveVectorCar = GetComponent<Transform>();
-			if(_carMoveRight == true) StartCoroutine(CarMovementRight());
-			if (_carMoveRight == false) StartCoroutine(CarMovementLeft());
+			if(CarMoveRight == true) StartCoroutine(CarMovementRight());
+			if (CarMoveRight == false) StartCoroutine(CarMovementLeft());
 		}
 
 		private IEnumerator MoveFromTo(Vector3 startPosition, Vector3 endPosition, float time)
@@ -41,7 +42,6 @@ namespace MyRunner
 		{
 			while (_carNotDestroy == true)
 			{
-				transform.Rotate(0, -180, 0);
 				yield return MoveFromTo(transform.position, transform.position + new Vector3(-50f, 0f, 0f), TimeBwtMove);
 				yield return new WaitForSeconds(timeToWaiting);
 

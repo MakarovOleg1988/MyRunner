@@ -9,7 +9,7 @@ namespace MyRunner
         [SerializeField] private bool _isCoin;
         [SerializeField] private bool _isAirKit;
 
-        void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (other.GetComponent<OldInputSystem>() == null) return;
 

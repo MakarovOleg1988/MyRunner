@@ -19,7 +19,7 @@ namespace MyRunner
             NewController.Actionmap.Jump.performed += _ => Jump();
         }
 
-        protected void Update()
+        protected void FixedUpdate()
         {
             base.Jump();
 

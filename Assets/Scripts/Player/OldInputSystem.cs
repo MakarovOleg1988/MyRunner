@@ -12,12 +12,12 @@ namespace MyRunner
             base.StartCoroutine(CorotiunespeedBust());
         }
 
-        protected void Update()
+        protected void FixedUpdate()
         {
-            if (Input.GetKey(KeyCode.A)) transform.position -= new Vector3(_speedSideways * Time.deltaTime, 0, 0); //Перемещение влево
-            if (Input.GetKey(KeyCode.D)) transform.position += new Vector3(_speedSideways * Time.deltaTime, 0, 0); //Перемещение вправо
+            if (Input.GetKey(KeyCode.A)) transform.position -= new Vector3(_speedSideways * Time.deltaTime, 0, 0); 
+            if (Input.GetKey(KeyCode.D)) transform.position += new Vector3(_speedSideways * Time.deltaTime, 0, 0); 
 
-            if (Input.GetKeyDown(KeyCode.Space)) Jump(); //Прыжок "старый"
+            if (Input.GetKeyDown(KeyCode.Space)) Jump();
         }
     }
 }

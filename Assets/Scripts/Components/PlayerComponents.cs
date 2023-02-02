@@ -12,7 +12,7 @@ namespace MyRunner
         [Space] public Rigidbody _rbPlayer;
     }
 
-    class PlayerHealth
+    public class PlayerHealth
     {
         private int _livesPlayer = 4;
 

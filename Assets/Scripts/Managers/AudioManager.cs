@@ -37,7 +37,7 @@ namespace MyRunner
             _clickButton.Play();
         }
 
-        public void onDestroy()
+        private void OnDestroy()
         {
             IEventManager._onSetDamage -= SetSoundCrach;
             IEventManager._onSetAidKit -= SetSoundLives;

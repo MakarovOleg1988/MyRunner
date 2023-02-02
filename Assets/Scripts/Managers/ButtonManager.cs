@@ -112,7 +112,7 @@ namespace MyRunner
         {
             StartCoroutine(ExitCoroutine());
         }
-
+         
         IEnumerator ExitCoroutine()
         {
             yield return new WaitForSeconds(0.2f);
