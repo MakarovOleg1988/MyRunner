@@ -27,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3080978862316877975}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.99691737, z: -0, w: -0.078458644}
   m_LocalPosition: {x: -26.32, y: 1.32, z: 59.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 909, z: 0}
 --- !u!33 &3080978862316877971
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -110,7 +110,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c5586a358c59d4e84e7f832e9f16d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _car: {fileID: 1885862921828382082, guid: 59a8c01bfa7fd904d91c75687cde9fef, type: 3}
-  _carLeft: {fileID: 4714918986472258121, guid: 95b5ab6e81fde9b4e8a0a9683299a729, type: 3}
+  _cars:
+  - {fileID: 1646981259178978, guid: 0ae65270c30153049ab49eb3ebf070d6, type: 3}
+  - {fileID: 1646981259178978, guid: 2dc42346e5313b34c93d598a61994629, type: 3}
+  - {fileID: 1646981259178978, guid: f463242ba59e68243b7a693d4f0cfc18, type: 3}
+  _cars2:
+  - {fileID: 1646981259178978, guid: 512151c1530b99343a884b12ee9c5e1e, type: 3}
+  - {fileID: 1646981259178978, guid: ab26596a331d7ee43a3e9d29e2be9f84, type: 3}
+  - {fileID: 1646981259178978, guid: 50477af197889084e8a6d97f2b73b73b, type: 3}
+  _cars3:
+  - {fileID: 1646981259178978, guid: c001c990dd7537347b71d55c3e8f202b, type: 3}
+  - {fileID: 1646981259178978, guid: a645b7f9195e7334b9a507f0da91a856, type: 3}
+  - {fileID: 1646981259178978, guid: 9f10675f6820c674f9be91a346e9def2, type: 3}
+  - {fileID: 1646981259178978, guid: 96ffb36ffdc1bfa459d68319627d4b41, type: 3}
+  - {fileID: 1646981259178978, guid: 4d02ba4e5ee9f494aba2b5e84325c89f, type: 3}
+  - {fileID: 1646981259178978, guid: 480f78b65fa0aa34d8237d52bb1f0363, type: 3}
+  _carChoose: 0
   _spawnpoint: {fileID: 3080978862316877964}
-  _timebetweenspawn: 3
