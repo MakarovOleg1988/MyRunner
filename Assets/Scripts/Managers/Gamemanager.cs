@@ -11,8 +11,6 @@ namespace MyRunner
         public GameObject _StartMenu;
         public GameObject _winMenu;
 
-        [SerializeField] private AudioSource _mainmusic;
-
         [SerializeField] private int finalProgress;
         private int progress = 0;
         private float _secBeforeStart = 5;

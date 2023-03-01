@@ -29,7 +29,7 @@ namespace MyRunner
 		{
 			while (_carNotDestroy == true)
 			{
-				yield return MoveFromTo(transform.position, transform.position + new Vector3(50f, 0f, 0f), TimeBwtMove);
+				yield return MoveFromTo(transform.position, transform.position + new Vector3(60f, 0f, 0f), TimeBwtMove);
 				yield return new WaitForSeconds(timeToWaiting);
 
 				Destroy(this.gameObject);
@@ -42,7 +42,7 @@ namespace MyRunner
 		{
 			while (_carNotDestroy == true)
 			{
-				yield return MoveFromTo(transform.position, transform.position + new Vector3(-50f, 0f, 0f), TimeBwtMove);
+				yield return MoveFromTo(transform.position, transform.position + new Vector3(-60f, 0f, 0f), TimeBwtMove);
 				yield return new WaitForSeconds(timeToWaiting);
 
 				Destroy(this.gameObject);
