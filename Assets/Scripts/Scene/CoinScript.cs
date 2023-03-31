@@ -6,7 +6,7 @@ namespace MyRunner
     {
             private void Start() => IEventManager._onSetCoin += SetCoin;
 
-            void Update()
+            private void FixedUpdate()
             {
                 transform.Rotate(Vector3.up, GetRotate * Time.deltaTime);
             }

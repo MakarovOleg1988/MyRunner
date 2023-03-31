@@ -11,7 +11,7 @@ namespace MyRunner
             IEventManager._onSetAidKit += SetLives;
         }
 
-        void Update()
+        private void Update()
         {
             RotateAidKit();
         }
@@ -23,9 +23,9 @@ namespace MyRunner
 
         public void SetLives()
         {
-                player.LivesPlayer++;
-                Gamemanager._Manager._LivesScore.text = player.LivesPlayer.ToString();
-                Debug.Log(player.LivesPlayer);
+            player.LivesPlayer++;
+            Gamemanager._Manager._LivesScore.text = player.LivesPlayer.ToString();
+            Debug.Log(player.LivesPlayer);
         }
     }
 }

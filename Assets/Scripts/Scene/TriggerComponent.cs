@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace MyRunner
@@ -11,7 +10,7 @@ namespace MyRunner
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<OldInputSystem>() == null) return;
+            if (other.GetComponent<NewInputSystem>() == null) return;
 
             if (_isDamage == true) IEventManager.SendSetDamage();
             else if(_isCoin == true) IEventManager.SendSetCoin();

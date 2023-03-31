@@ -5,7 +5,6 @@ namespace MyRunner
 {
 	public class CarMovementScript : CarsComponents
 	{
-
 		private void Start()
 		{
 			_moveVectorCar = GetComponent<Transform>();
@@ -15,7 +14,7 @@ namespace MyRunner
 
 		private IEnumerator MoveFromTo(Vector3 startPosition, Vector3 endPosition, float time)
 		{
-			var currentTime = 0f;
+			float currentTime = 0f;
 			while (currentTime < time)
 			{
 				transform.position = Vector3.Lerp(startPosition, endPosition, 1 - (time - currentTime) / time);

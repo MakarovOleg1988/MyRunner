@@ -4,12 +4,10 @@ namespace MyRunner
 {
     public class PlayerComponents : MonoBehaviour
     {
-        [SerializeField] public float _speedBust;
-        [SerializeField] public float _speedMove;
-        [SerializeField, Range(1, 10)] protected float _jumpForce;
+        [SerializeField] protected float _speedBust;
+        [SerializeField] protected float _speedMove;
         [SerializeField, Range(1, 10)] protected float _speedSideways;
-        [SerializeField] protected float CooldownJump = 1f;
-        [Space] public Rigidbody _rbPlayer;
+        protected Rigidbody _rbPlayer;
     }
 
     public class PlayerHealth

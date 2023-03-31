@@ -22,7 +22,6 @@ namespace MyRunner
         [SerializeField] public Text _textOfProgress;
         [SerializeField] public Text _LivesScore;
         [SerializeField] public Text _CoinScore;
-        [SerializeField] public Text _scoreOfWin;
         [SerializeField] public Text _timerforStart;
         
         private void Awake()
@@ -50,7 +49,6 @@ namespace MyRunner
         {
             progress++;
             _textOfProgress.text = progress.ToString();
-            _scoreOfWin.text = finalProgress.ToString();
 
             if (progress >= finalProgress) _winMenu.SetActive(true);
 

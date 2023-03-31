@@ -9,19 +9,12 @@ namespace MyRunner
         private void Start()
         {
             IEventManager._onSetDamage += SetDamage;
-        }
-
-        public void FixedUpdate()
-        {
-            LoseGame();
+            IEventManager._onSetLoseLevel += SendSetLoseLevel;
         }
         
-        public void LoseGame()
+        public void SendSetLoseLevel()
         {
-            if (player.LivesPlayer <= 0)
-            {
-                Gamemanager._Manager._loseMenu.SetActive(true);
-            }
+            Gamemanager._Manager._loseMenu.SetActive(true);
         }
 
         private void SetDamage()
@@ -30,6 +23,8 @@ namespace MyRunner
            
             Gamemanager._Manager._LivesScore.text = player.LivesPlayer.ToString();
             Debug.Log(player.LivesPlayer);
+
+            if (player.LivesPlayer <= 0) IEventManager.SendSetLoseLevel();
         }
     }
 }

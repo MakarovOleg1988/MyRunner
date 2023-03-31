@@ -1,9 +1,6 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.UI;
-using System;
 
 namespace MyRunner
 {
@@ -12,7 +9,6 @@ namespace MyRunner
         [SerializeField] private GameObject _pausePanel;
         [SerializeField] private GameObject _ChangeLevelPanel;
         [SerializeField] private GameObject _MainMenuPanel;
-        [SerializeField] private Text[] _level;
 
         public void ActionChangeLevelPanel()
         {

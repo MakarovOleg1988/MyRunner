@@ -5,18 +5,14 @@ namespace MyRunner
 {
     public class BaseControllerPlayer : PlayerComponents
     {
-
         protected virtual void Start()
         {
             _rbPlayer = GetComponent<Rigidbody>();
-            
-            StartCoroutine(CorotiuneMovement());
-            StartCoroutine(CorotiunespeedBust());
         }
 
         protected IEnumerator CorotiuneMovement()
         {
-            var Timer = 5;
+            int Timer = 5;
             while (Timer >= 0)
             {
                 Timer--;
@@ -40,16 +36,6 @@ namespace MyRunner
                 _speedBust = _speedBust + 1f;
                 yield return new WaitForSeconds(20);
             }
-        }
-
-        protected virtual void Jump()
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && CooldownJump <= 0)
-            {
-                _rbPlayer.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
-                CooldownJump = 1f;
-            }
-            else CooldownJump -= Time.deltaTime;
         }
     }
 }

@@ -6,26 +6,32 @@ namespace MyRunner
     {
         private MyRunnerController NewController;
 
+        void Awake()
+        {
+            NewController = new MyRunnerController();
+            NewController.Actionmap.Movement.Enable();
+        }
         protected override void Start()
         {
             base.StartCoroutine(CorotiuneMovement());
             base.StartCoroutine(CorotiunespeedBust());
         }
 
-        void Awake()
-        {
-            NewController = new MyRunnerController();
-            NewController.Actionmap.Movement.Enable();
-            NewController.Actionmap.Jump.performed += _ => Jump();
-        }
-
         protected void FixedUpdate()
         {
-            base.Jump();
-
             var direction = NewController.Actionmap.Movement.ReadValue<float>();
             if (direction == 0) return;
             transform.position += direction * _speedSideways * Time.deltaTime * transform.right;
+        }
+
+        private void OnDisable()
+        {
+            NewController.Actionmap.Disable();
+        }
+
+        private void OnDestroy()
+        {
+            NewController.Disable();
         }
     }
 }
